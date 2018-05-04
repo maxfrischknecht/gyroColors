@@ -39,9 +39,9 @@ function draw() {
 }
 
 function windowResized(){
+	resizeCanvas(windowWidth, windowHeight);
 	noStroke();
 	background(5);
-	resizeCanvas(windowWidth, windowHeight);
 }
 
 function edges(){
