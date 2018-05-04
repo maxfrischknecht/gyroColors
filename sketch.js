@@ -39,6 +39,8 @@ function draw() {
 }
 
 function windowResized(){
+	noStroke();
+	background(5);
 	resizeCanvas(windowWidth, windowHeight);
 }
 
