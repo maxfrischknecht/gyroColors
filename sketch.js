@@ -5,7 +5,6 @@ function setup() {
 	createCanvas(windowWidth, windowHeight);
 	noStroke();
 	background(5);
-	blendMode(LIGHTEST);
 
 	xpos = width / 2;
   ypos = height / 2;
