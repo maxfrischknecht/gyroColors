@@ -21,6 +21,7 @@ class FallingCircles {
 
   moving(){
     this.y += this.gravity;
+    this.x += this.gravity;
   }
 
   randomWalker(){
