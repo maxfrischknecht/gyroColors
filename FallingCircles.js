@@ -4,7 +4,7 @@ class FallingCircles {
   constructor(x, y, value) {
     this.x = x;
     this.y = y;
-    this.r = 20;
+    this.r = 30;
     this.gravity = random(-5, 5);
 
     this.val = value;
@@ -51,7 +51,7 @@ class FallingCircles {
     // console.log(val);
     this.c = color('hsb('+ this.val +', 100%, ' + this.saturation + '%)');
     if (this.saturation > 10) {
-      this.saturation = this.saturation - 0.1;
+      this.saturation = this.saturation - 0.3;
     }
   
   }
