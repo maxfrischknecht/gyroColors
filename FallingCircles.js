@@ -6,6 +6,7 @@ class FallingCircles {
     this.y = y;
     this.r = 50;
     this.gravity = random(-5, 5);
+    this.gravity2 = random(-5, 5);
 
     this.val = value;
     this.saturation = 100;
@@ -21,7 +22,7 @@ class FallingCircles {
 
   moving(){
     this.y += this.gravity;
-    this.x += this.gravity;
+    this.x += this.gravity2;
   }
 
   randomWalker(){
