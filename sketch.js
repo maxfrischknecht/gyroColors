@@ -20,7 +20,7 @@ function draw() {
 		for (let i = fallingCircles.length-1; i >= 0; i--) { // pull out every single element and call if fc, const = locked!
 			let fc = fallingCircles[i];
 			fc.randomWalker();
-			fc.increaseSaturation(value);
+			fc.increaseSaturation();
 
 		}
 
