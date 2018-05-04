@@ -26,7 +26,10 @@ class FallingCircles {
   }
 
   randomWalker(){
-    let choice = int(random(4));
+
+    if(frameCount % 5 == 0){
+      let choice = int(random(4));
+  
 
     if (choice == 0) {
       this.x+=3; // move right
@@ -41,6 +44,7 @@ class FallingCircles {
     this.x = constrain(this.x,0,width-1);
     this.y = constrain(this.y,0,height-1);
 
+  }
   }
 
   grow(){
