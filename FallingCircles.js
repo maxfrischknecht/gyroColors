@@ -4,7 +4,7 @@ class FallingCircles {
   constructor(x, y, value) {
     this.x = x;
     this.y = y;
-    this.r = 30;
+    this.r = 50;
     this.gravity = random(-5, 5);
 
     this.val = value;

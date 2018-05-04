@@ -4,7 +4,7 @@ let xpos, ypos;
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	noStroke();
-	background(20, 20, 20);
+	background(5);
 
 	xpos = width / 2;
   ypos = height / 2;
