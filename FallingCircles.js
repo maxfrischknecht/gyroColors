@@ -4,7 +4,7 @@ class FallingCircles {
   constructor(x, y, value) {
     this.x = x;
     this.y = y;
-    this.r = 100;
+    this.r = 50;
     this.gravity = random(-5, 5);
 
     this.val = value;
@@ -29,13 +29,13 @@ class FallingCircles {
     let choice = int(random(4));
 
     if (choice == 0) {
-      this.x+=5; // move right
+      this.x+=3; // move right
     } else if (choice == 1) {
-      this.x-=5; // move left
+      this.x-=3; // move left
     } else if (choice == 2) {
-      this.y+=5; // move down
+      this.y+=3; // move down
     } else {
-      this.y-=5; // move up
+      this.y-=3; // move up
     }
 
     this.x = constrain(this.x,0,width-1);
