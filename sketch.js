@@ -4,7 +4,8 @@ let xpos, ypos;
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	noStroke();
-	blendMode(LIGHTEST);
+	background(20, 20, 20);
+
 	xpos = width / 2;
   ypos = height / 2;
 
@@ -15,29 +16,25 @@ function draw() {
 		ypos -= sy; // sy
 		edges();
 
-		background(20, 20, 20);
-
-		// color based on mouse pos
-		let value = int(map(xpos, 0, width, 0, 255));
-
 		// make the array backwards to easier remove objects
 		for (let i = fallingCircles.length-1; i >= 0; i--) { // pull out every single element and call if fc, const = locked!
 			let fc = fallingCircles[i];
-			fc.moving();
-			// fc.grow();
+			fc.randomWalker();
 			fc.increaseSaturation(value);
 
-			// if not visible remove from array
-			if (fc.y < 0 || fc.y > height) {
-				fallingCircles.splice(i, 1);
-			}
+		}
+
+		if(fallingCircles.length > 600) {
+			fallingCircles.splice(0, 1);
 		}
 
 		for (const fc of fallingCircles) {
 			fc.show();
 		}
 
-		fallingCircles.push(new FallingCircles(xpos, ypos));
+		// color based on mouse pos
+		let value = int(map(xpos, 0, width, 0, 255));
+		fallingCircles.push(new FallingCircles(xpos, ypos, value));
 
 }
 
