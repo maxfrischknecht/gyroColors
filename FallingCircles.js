@@ -9,14 +9,12 @@ class FallingCircles {
 
     this.val = value;
     this.saturation = 100;
-    // this.saturation = int(random(100));
 
     this.c = color('hsb('+ this.val +', 100%, ' + this.saturation + '%)');
 
   }
 
   show(){
-    // background(20, 20, 20);
     fill(this.c);
     ellipse(this.x, this.y, this.r);
   }
@@ -50,7 +48,7 @@ class FallingCircles {
   increaseSaturation(){
     // console.log(val);
     this.c = color('hsb('+ this.val +', 100%, ' + this.saturation + '%)');
-    if (this.saturation > 0) {
+    if (this.saturation > 10) { // should be 10
       this.saturation = this.saturation - 0.3;
     }
   

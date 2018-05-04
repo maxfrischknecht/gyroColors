@@ -12,16 +12,15 @@ function setup() {
 }
 
 function draw() {
-		xpos += sx+2; // sx
-		ypos -= sy+2; // sy
+		xpos += sx; // sx
+		ypos -= sy; // sy
 		edges();
 
 		// make the array backwards to easier remove objects
 		for (let i = fallingCircles.length-1; i >= 0; i--) { // pull out every single element and call if fc, const = locked!
 			let fc = fallingCircles[i];
-			fc.randomWalker();
+			fc.moving();
 			fc.increaseSaturation();
-
 		}
 
 		if(fallingCircles.length > 600) {
@@ -37,11 +36,6 @@ function draw() {
 		fallingCircles.push(new FallingCircles(xpos, ypos, value));
 
 }
-
-// add by mouse pos to array
-// function mouseMoved() {
-// 	fallingCircles.push(new FallingCircles(xpos, ypos));
-// }
 
 function windowResized(){
 	resizeCanvas(windowWidth, windowHeight);
