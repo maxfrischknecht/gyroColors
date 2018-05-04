@@ -11,7 +11,6 @@ function setup() {
 }
 
 function draw() {
-	if (!focused) {
 		xpos += sx; // sx
 		ypos -= sy; // sy
 		edges();
@@ -38,15 +37,14 @@ function draw() {
 			fc.show();
 		}
 
-	}
+		fallingCircles.push(new FallingCircles(xpos, ypos));
+
 }
 
 // add by mouse pos to array
-function mouseMoved() {
-	if (!focused) {
-	fallingCircles.push(new FallingCircles(xpos, ypos));
-	}
-}
+// function mouseMoved() {
+// 	fallingCircles.push(new FallingCircles(xpos, ypos));
+// }
 
 function windowResized(){
 	resizeCanvas(windowWidth, windowHeight);
