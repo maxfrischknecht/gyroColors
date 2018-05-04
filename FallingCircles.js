@@ -29,13 +29,13 @@ class FallingCircles {
     let choice = int(random(4));
 
     if (choice == 0) {
-      this.x+=20; // move right
+      this.x+=5; // move right
     } else if (choice == 1) {
-      this.x-=20; // move left
+      this.x-=5; // move left
     } else if (choice == 2) {
-      this.y+=20; // move down
+      this.y+=5; // move down
     } else {
-      this.y-=20; // move up
+      this.y-=5; // move up
     }
 
     this.x = constrain(this.x,0,width-1);
