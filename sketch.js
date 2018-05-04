@@ -33,7 +33,7 @@ function draw() {
 		}
 
 		// color based on mouse pos
-		let value = int(map(xpos, 0, width, 0, 255));
+		let value = int(map(xpos, 0, width, 180, 330));
 		fallingCircles.push(new FallingCircles(xpos, ypos, value));
 
 }
