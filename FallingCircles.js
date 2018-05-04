@@ -50,7 +50,7 @@ class FallingCircles {
   increaseSaturation(){
     // console.log(val);
     this.c = color('hsb('+ this.val +', 100%, ' + this.saturation + '%)');
-    if (this.saturation > 10) {
+    if (this.saturation > 0) {
       this.saturation = this.saturation - 0.3;
     }
   
