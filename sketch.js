@@ -12,8 +12,8 @@ function setup() {
 }
 
 function draw() {
-		xpos += sx; // sx
-		ypos -= sy; // sy
+		xpos += sx+2; // sx
+		ypos -= sy+2; // sy
 		edges();
 
 		// make the array backwards to easier remove objects
